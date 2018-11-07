@@ -3,23 +3,20 @@ import java.util.*;
 public class OwnSortAlgorithm {
 
     public void sortAscOrder(int[] arr){
-
         ArrayList<Integer> duplicateValues = new ArrayList<Integer>();
         for(int i=0; i<arr.length; i++) {
             int j = i;
-            int temp = arr[i];
             for(j=j+1; j<arr.length; j++){
                 if(arr[i] > arr[j]){
-                    arr[i] =arr[j];
-                    arr[j] = temp;
-
+                    int temp = arr[j];
+                    arr[j] =arr[i];
+                    arr[i] = temp;
                 }
             }
         }
 
-
-            System.out.println(Arrays.toString(arr));
-
+//            System.out.println(Arrays.toString(arr));
+//
 
     }
 
@@ -28,7 +25,7 @@ public class OwnSortAlgorithm {
 //
     public void arraySize() {
 //        int arraysize = steps;
-        int[] array = new int[]{1,8,5,7,3,9};
+        int[] array = new int[]{4,8,6,7,3,9};
 //        steps += 5000;
 //        for(int i=0; i<10; i++){
 //            array[i]=i;
